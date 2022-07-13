@@ -1,18 +1,18 @@
 @media (max-width:1000px) {
     #navbar {
         position: absolute;
-        /* top: 19%; */
         top: 0;
-        right: 0;
+        left: 0;
         width: 100vw;
         height: 100vh;
         background: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
         z-index: 120;
         transition: all .5s linear;
         transform: translateX(100%);
-        /* visibility: none; */
+        visibility: none;
         opacity: 0;
         pointer-events: none;
+
     }
 
     .active #navbar {
@@ -23,7 +23,8 @@
     }
 
     .right-nav {
-        flex-direction: column;
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
     }
 
     .burger {
@@ -91,6 +92,11 @@
 @media (max-width:550px) {
     html {
         font-size: 40%;
+    }
+    .section-hero p{
+        padding: 0 1rem;
+        font-size: 2.2rem;
+    
     }
     .common-heading {
         font-size: 3.5rem;
@@ -167,7 +173,7 @@
         font-size: 40%;
     }
     h1{
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     .common-heading {
         font-size: 3rem;

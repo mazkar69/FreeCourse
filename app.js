@@ -21,6 +21,11 @@ app.get("/", async (req, res) => {
     
 
 })
+app.get("/course", async (req, res) => {
+    res.render("course");
+    
+
+})
 
 app.get("*", (req, res) => {
     res.send("page not found!");

@@ -16,35 +16,8 @@
     <!------------------------------------- 
             Header start here
      --------------------------------------->
-    <header class="header" id="header">
-        <span class="logo"><a href="/">FreeCourse</a></span>
-        <div class="nav-item">
-        </div>
-        <form action="" method="" class="search-form">
-            <!-- <i class="fa-solid fa-magnifying-glass d-none"></i> -->
-            <input type="text" placeholder="Search here..." name="search" class="inputsearch d-block">
-        </form>
-        <nav class="navbar" id="navbar">
-            <div class="right-nav">
-                <div class="nav-item dropdown">
-                    <button class="drp-btn">Category<i class="fa-solid fa-caret-down"></i></button>
-                    <div id="myDropdown" class="dropdown-content hdrop">
-                        <a href="#home"><i class="fa-solid fa-arrow-right"></i>Programming</a>
-                        <a href="#about"><i class="fa-solid fa-arrow-right"></i>Web development</a>
-                        <a href="#contact"><i class="fa-solid fa-arrow-right"></i>DSA</a>
-                        <a href="#contact"><i class="fa-solid fa-arrow-right"></i>Networking</a>
-                    </div>
-                </div>
-                <div class="nav-item nav-btn">
-                    <a href="/" class="btn-1">Register</a>
-                </div>
-            </div>
-        </nav>
-        <div class="burger">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </header>
-
+     <%- include("./common/navbar.ejs") -%>
+    
     <!------------------------------------- 
             Hero Sction  start here
      --------------------------------------->
@@ -55,7 +28,7 @@
                 <p>Download all paid course in completly free. Direct download Link.</p>
             </div>
             <div class="hero-btn d-flex">
-                <button class="btn-2">Course</button>
+                <a href="/course" class="btn-2">Course</a>
                 <button class="btn-2">Join Us</button>
             </div>
         </div>
@@ -215,7 +188,7 @@
     <section class="section section-banner">
         <div class="container d-flex d-flex-column">
             <h2>We Have More Than <span>1100+ Free </span> Course</h2>
-            <a href="/" class="btn-2">CHECK HERE</a>
+            <a href="/course" class="btn-2">CHECK HERE</a>
         </div>
     </section>
 
@@ -287,7 +260,7 @@
         <div class="container d-flex">
             <h2 class="common-heading">TESTIMONIAL</h2>
         </div>
-        <div class="container">
+        <div class="container d-flex">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide d-flex d-flex-column">
@@ -334,52 +307,8 @@
             </div>
         </div>
     </section>
-    <footer class="section-footer">
-        <div class=" container grid grid-three-column">
-            <div class="f-support f-box">
-                <h3>Have any Queries and Suggestions?</h3>
-                <p>Mail us for any types of query and suggestion. If you want to post course in this website then your
-                    most welcome mail in below given email address.</p>
-                <span><a href="mailto:mohdazkar@outlook.com">mohdazkar@outlook.com</a></span>
-                <div class="f-social-icons d-flex">
-                    <i class="fa-brands fa-instagram icon"></i>
-                    <i class="fa-brands fa-github icon"></i>
-                    <i class="fa-brands fa-linkedin icon"></i>
-                </div>
-
-            </div>
-            <div class="f-box ">
-                <h3>Links</h3>
-                <div class="f-links">
-                    <a href="/"><i class="fa-solid fa-arrow-right"></i>Home</a>
-                    <a href="/"><i class="fa-solid fa-arrow-right"></i>Top Course</a>
-                    <a href="/"><i class="fa-solid fa-arrow-right"></i>DSA</a>
-                    <a href="/"><i class="fa-solid fa-arrow-right"></i>Programming</a>
-                    <a href="/"><i class="fa-solid fa-arrow-right"></i>Hacking</a>
-
-                </div>
-
-
-            </div>
-            <div class="f-askcourse f-box">
-                <h3>Ask For Course</h3>
-                <form action="/" class="d-flex d-flex-column">
-                    <input type="text" name="c-name" placeholder="Course name" id="">
-                    <input type="text" name="c-link" placeholder="Paste course link" id="">
-                    <input type="submit" name="Submit" id="">
-                </form>
-
-            </div>
-
-        </div>
-        <div class="container">
-            <div class="f-credit">
-                <p>
-                    Copyright &copy; all rights reserved. This website is made by AzKaR</p>
-                </p>
-            </div>
-
-    </footer>
+    
+    <%- include("./common/footer.ejs") -%>
 
 
     <!-- Some js file -->

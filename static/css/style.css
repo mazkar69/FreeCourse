@@ -27,7 +27,7 @@
 
 }
 
-html {
+html{
     font-size: 51.5%;
     font-family: "Work Sans", sans-serif;
     overflow-x: hidden;
@@ -36,6 +36,7 @@ html {
 
 body {
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 h1,
@@ -86,6 +87,7 @@ Header start here
     justify-content: space-between;
     height: 7rem;
     padding: 0 10rem;
+    position: relative;
 }
 
 
@@ -148,42 +150,7 @@ Header start here
 /* ------------------------------------
     Dropdown 
 ------------------------------------*/
-.dropdown {
-    position: relative;
-    z-index: 12;
 
-}
-
-.drp-btn {
-    border: 0;
-    background-color: none;
-    cursor: pointer;
-    background: transparent;
-    transition: all 0.3s linear;
-    color: var(--heading);
-    font-size: 2.5rem;
-
-}
-
-#myDropdown {
-    margin-top: .8rem;
-    padding-top: 1.5rem;
-    background-color: var(--bg);
-    position: absolute;
-    min-width: 30rem;
-    display: flex;
-    flex-direction: column;
-    column-gap: 2rem;
-    border-radius: 1;
-    z-index: 12;
-
-}
-
-.hdrop {
-    display: none;
-    visibility: none;
-    opacity: 0;
-}
 
 /* ------------------END OF DROPDOWN------------------------- */
 #myDropdown a {
