@@ -12,13 +12,20 @@
 
 <body>
     <header class="header" id="header">
-        <span class="logo"><a href="/">FreeCourse</a></span>
-        <div class="nav-item">
-        </div>
+        <span id="logo"><a href="/">FreeCourse</a></span>
         <nav class="navbar" id="navbar">
             <div class="right-nav">
+                <div class="drapdown" id="dropdown" onmouseover="drop_hover(this)" onmouseout="drop_out(this)">
+                    <button class="dropbtn">Categries <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="dropdown-contant" id="drop-contant">
+                        <a href="">Programming</a>
+                        <a href="">Designing</a>
+                        <a href="">Data Structure</a>
+                    </div>
+                </div>
                 <div class="nav-item nav-btn">
-                    <a href="/register" class="btn-1">Register</a>
+                    <button class="sm-btn"><a href="/signup">SignUp</a></button>
+                    <button class="sm-btn"><a href="/login">LogIn</a></button>
                 </div>
             </div>
         </nav>

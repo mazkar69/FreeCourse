@@ -18,7 +18,7 @@
 
     #container {
         width: 50rem;
-        height: 60rem;
+        height: 50rem;
         border: 1px solid rgb(144, 144, 144);
         display: flex;
         flex-direction: column;
@@ -119,22 +119,21 @@
         <section id="section">
             <div id="container" class="login-form">
                 <h2>Login to your accont</h2>
-                <form action="/signup" method="post">
-                    <input type="text" name="name" id="name" required placeholder="Full Name">
+                <form action="/login" method="post">
+
                     <i class="fa-solid fa-user"></i>
-                    <input type="email" name="email" id="Email" required placeholder="Email">
+                    <input type="text" name="email" id="Email" required placeholder="Email">
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" name="password" id="password" required placeholder="Password" min="8">
-                    <i class="fa-solid fa-key"></i>
-                    <input type="password" name="cnf_password" id="cnf_passwrd" required placeholder="Confirm password" min="8">
+                    <input type="password" name="password" id="password" required placeholder="Password">
                     <div class="forger-pass">
                         <span>Forgot <a href="/">Username/Password?</a></span>
+
                     </div>
                     <button class="login-btn" type="submit">LogIn</button>
                 </form>
                 <div class="signup">
-                    <span>Already have an account?</span>
-                    <a href="/login">Login Now</a>
+                    <span>Don’t have an account?</span>
+                    <a href="/signup">SignUp Now</a>
                 </div>
 
             </div>

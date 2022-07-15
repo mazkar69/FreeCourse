@@ -19,7 +19,7 @@
     }
 
     .swiper {
-        max-width: 135rem !important;
+        max-width: 120rem !important;
         padding: 0 2rem;
 
     }
@@ -29,8 +29,8 @@
         padding: 0 !important;
         display: flex;
         flex-direction: column;
-        /* justify-content: space-around !important; */
         gap: 1rem;
+        min-height: 38rem !important;
 
     }
 
@@ -61,27 +61,175 @@
     }
 
     .swiper-slide-bottom {
-        display: flex;
-        flex-direction: column;
-        padding: 0 1rem;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0 1rem !important;
         justify-content: space-evenly !important;
     }
-    .section-hero::before {
-    background-image: url("/static/img/heor-3-1.jpg") !important;
 
+    .section-hero {
 
-}
+        background-image: url("/static/img/heor-3-1.jpg") !important;
+
+    }
+
+    @media (max-width:1400px) {
+        .section-hero {
+
+            height: 50rem !important;
+
+        }
+    }
+
+    @media (max-width:1130px) {
+        .section-hero {
+
+            height: 40rem !important;
+
+        }
+    }
+
+    @media (max-width:900px) {
+        .section-hero {
+
+            height: 30rem !important;
+
+        }
+    }
+
+    @media (max-width:520px) {
+        .section-hero {
+
+            height: 25rem !important;
+
+        }
+    }
+
+    @media (max-width:400px) {
+        .section-hero {
+
+            height: 20rem !important;
+
+        }
+    }
 </style>
 
 <body>
     <!-- Header  -->
     <%- include("./common/navbar.ejs") -%>
-    <!-- hero section  -->
-    <section class="section section-hero" id="hero">
-        <div class="container d-flex d-flex-column">
+        <!-- hero section  -->
+        <section class="section section-hero" id="hero">
+            <div class="container d-flex d-flex-column">
 
-        </div>
-    </section>
+            </div>
+        </section>
+
+        <!------------------------------------- 
+            Course Section  start here
+     --------------------------------------->
+        <section class="section section-course">
+            <div class="container d-flex">
+                <h2 class="common-heading">Recently Uploaded</h2>
+            </div>
+            <div class="container">
+                <div class="course-boxes">
+                    <div class="course-box d-flex d-flex-column">
+                        <div class="course-data">
+                            <div class="course-img">
+                                <img src="/static/img/course-2.jpg" alt="">
+                            </div>
+                            <div class="course-title">
+                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
+                                <p>Become a Ethical hacker by completing this course, This course is for absulute
+                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
+                                    course, This course is for absulute begginers.</p>
+                            </div>
+                        </div>
+                        <div class="course-btn">
+                            <span>15<i class="fa-solid fa-download"></i></span>
+                            <span>Duration: 1.5hr</span>
+                            <a href="/" class="btn-2">Get Free</a>
+                        </div>
+                    </div>
+                    <!-- ========================== -->
+                    <div class="course-box d-flex d-flex-column">
+                        <div class="course-data">
+                            <div class="course-img">
+                                <img src="/static/img/course-5.jpg" alt="">
+                            </div>
+                            <div class="course-title">
+                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
+                                <p>Become a Ethical hacker by completing this course, This course is for absulute
+                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
+                                    course, This course is for absulute begginers.</p>
+                            </div>
+                        </div>
+                        <div class="course-btn">
+                            <span>15<i class="fa-solid fa-download"></i></span>
+                            <span>Duration: 1.5hr</span>
+                            <a href="/" class="btn-2">Get Free</a>
+                        </div>
+                    </div>
+                    <!-- ==================================== -->
+                    <div class="course-box d-flex d-flex-column">
+                        <div class="course-data">
+                            <div class="course-img">
+                                <img src="/static/img/course-6.jpg" alt="">
+                            </div>
+                            <div class="course-title">
+                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
+                                <p>Become a Ethical hacker by completing this course, This course is for absulute
+                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
+                                    course, This course is for absulute begginers.</p>
+                            </div>
+                        </div>
+                        <div class="course-btn">
+                            <span>15<i class="fa-solid fa-download"></i></span>
+                            <span>Duration: 1.5hr</span>
+                            <a href="/" class="btn-2">Get Free</a>
+                        </div>
+                    </div>
+                    <!-- ================================================== -->
+                    <div class="course-box d-flex d-flex-column">
+                        <div class="course-data">
+                            <div class="course-img">
+                                <img src="/static/img/course-7.jpg" alt="">
+                            </div>
+                            <div class="course-title">
+                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
+                                <p>Become a Ethical hacker by completing this course, This course is for absulute
+                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
+                                    course, This course is for absulute begginers.</p>
+                            </div>
+                        </div>
+                        <div class="course-btn">
+                            <span>15<i class="fa-solid fa-download"></i></span>
+                            <span>Duration: 1.5hr</span>
+                            <a href="/" class="btn-2">Get Free</a>
+                        </div>
+                    </div>
+                    <!-- ============================================ -->
+                    <div class="course-box d-flex d-flex-column">
+                        <div class="course-data">
+                            <div class="course-img">
+                                <img src="/static/img/course-8.jpg" alt="">
+                            </div>
+                            <div class="course-title">
+                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
+                                <p>Become a Ethical hacker by completing this course, This course is for absulute
+                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
+                                    course, This course is for absulute begginers.</p>
+                            </div>
+                        </div>
+                        <div class="course-btn">
+                            <span>15<i class="fa-solid fa-download"></i></span>
+                            <span>Duration: 1.5hr</span>
+                            <a href="/" class="btn-2">Get Free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>n
 
         <!-- Swiper -->
         <section class="section section-course">
@@ -333,7 +481,6 @@
 
             </div>
 
-
             <div class="container d-flex">
                 <div class="container d-flex">
                     <h2 class="common-heading">Designing courses</h2>
@@ -474,9 +621,9 @@
             <!-- Initialize Swiper -->
             <script>
                 var swiper = new Swiper(".mySwiper", {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 20,
-                    slidesPerGroup: 4,
+                    slidesPerGroup: 3,
                     loopFillGroupWithBlank: true,
                     freeMode: true,
                     navigation: {
@@ -484,9 +631,9 @@
                         prevEl: ".swiper-button-prev"
                     },
                     breakpoints: {
-                        100:{
-                            slidesPerView:1,
-                            spaceBetween:20,
+                        100: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
                             slidesPerGroup: 1,
 
                         },
@@ -497,12 +644,13 @@
                         },
                         680: {
                             slidesPerView: 3,
-                            spaceBetween: 20,
                             slidesPerGroup: 3,
+                            spaceBetween: 20,
                         },
                         1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 20,                   
+                            slidesPerView: 3,
+                            slidesPerGroup: 3,
+                            spaceBetween: 20,
                         },
                     },
                 });
