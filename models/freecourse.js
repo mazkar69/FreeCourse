@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 
 const freecourseSchema = mongoose.Schema({
+    c_id:{
+        type:Number,
+        unique:true,
+        required:true
+    },
     title:{
         type:String,
         required:true,
@@ -14,7 +19,7 @@ const freecourseSchema = mongoose.Schema({
         required:true,
         trim:true,
         minlength:[10,"Mininum 10 charector"],
-        maxlength:[400,"maximin charector allowed 400"],
+        maxlength:[1000,"maximin charector allowed 400"],
 
     },
     author:{

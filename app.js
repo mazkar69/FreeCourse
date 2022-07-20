@@ -61,7 +61,9 @@ const upload = multer({
 ---------------------------------------------------------*/
 app.get("/", async (req, res) => {
 
-    res.render("index");
+    const result = await Course.find({trend:"top five"});
+    // console.log(result)
+    res.render("index",{result});
 
 
 })
@@ -73,6 +75,7 @@ app.get("/login", async (req, res) => {
     res.render("login");
 
 })
+
 app.post("/login", async (req, res) => {
     try {
         let email = req.body.email;
@@ -97,6 +100,7 @@ app.post("/login", async (req, res) => {
 
 
 })
+
 app.get("/signup", async (req, res) => {
     res.render("register");
 
@@ -119,12 +123,16 @@ app.post("/signup", async (req, res) => {
 
 })
 
-app.get("/uploadcourse", (req, res) => {
-    res.render("upload");
+app.post("/upload", async (req, res) => {
+    totalCourse = await Course.find().count();
+
+    res.render("upload",{c_id:totalCourse});
 
 })
 
 app.post("/uploadcourse", upload.single("imageFile"), async (req, res) => {
+    totalCourse = await Course.find().count();
+    let c_id = totalCourse+1;
     let cat = req.body.category.split(",");
     let keyword = req.body.keyword.split(",");
     let trend = req.body.trends.split(",");
@@ -132,6 +140,7 @@ app.post("/uploadcourse", upload.single("imageFile"), async (req, res) => {
 
 
         const course = new Course({
+            c_id:c_id,
             title: req.body.title,
             discription: req.body.description,
             author: req.body.author,
@@ -169,6 +178,9 @@ app.post("/uploadcourse", upload.single("imageFile"), async (req, res) => {
 
     }
 
+})
+app.get("/admin",(req,res)=>{
+    res.render("admin")
 })
 app.get("*", (req, res) => {
     res.send("page not found!");

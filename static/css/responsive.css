@@ -40,7 +40,7 @@
 
 @media (max-width:800px) {
     html {
-        font-size: 55%;
+        font-size: 45%;
     }
 
     .container .box {
@@ -59,7 +59,7 @@
 
 @media (max-width:650px) {
     html {
-        font-size: 50%;
+        font-size: 40%;
     }
 
     .search-form {
@@ -91,7 +91,7 @@
 
 @media (max-width:550px) {
     html {
-        font-size: 48%;
+        font-size: 38%;
     }
     .section-hero p{
         padding: 0 1rem;
@@ -170,7 +170,7 @@
 @media (max-width:400px){
 
     html{
-        font-size: 46%;
+        font-size: 36%;
     }
     h1{
         font-size: 4rem;

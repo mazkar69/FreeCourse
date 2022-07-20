@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Pannel</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+    }
+
+    nav {
+        position: relative;
+        background-color: rgb(41, 39, 39);
+        padding: 10px 0;
+        color: rgb(213, 213, 213);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        transition: all .5s linear;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        transition: all .3s linear;
+    }
+
+    ul li {
+        text-decoration: none;
+        list-style: none;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 8px 0px;
+        transition: all .3s linear;
+        color: rgb(213, 213, 213);
+
+    }
+
+    ul li:hover {
+        color: rgb(255, 255, 255);
+
+
+    }
+
+    .ham-burger {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        display: none;
+
+    }
+
+    .line {
+        background-color: white;
+        color: white;
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        border-radius: 3px;
+    }
+
+ 
+
+
+
+    .h-nav {
+        height: 200px;
+    }
+
+    .v-nav {
+        display: block;
+    }
+
+    .container {
+        width: 100vw;
+        padding: 2rem;
+        display: grid;
+        place-content: center;
+        background-color: #f3f3f3;
+        min-height: 100vh;
+    }
+
+    form {
+        max-width: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        /* border: 1px solid red; */
+    }
+
+    input {
+        width: 100%;
+        padding: .5rem;
+        font-size: 24px;
+
+    }
+
+    
+    @media (max-width:800px) {
+        .ham-burger {
+        display: block;
+
+    }
+    ul{
+        flex-direction: column;
+        display: none;
+
+    }
+    h-nav{
+        height: 200px;
+    }
+    .v-nav{
+        display: blockn
+        ;
+    }
+
+
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li class="all_course">All Course</li>
+            <li class="add_course">Add Course</li>
+            <li class="update_course">Update Course</li>
+            <li class="delete_course">Delete Course</li>
+        </ul>
+        <div class="ham-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form action="/upload" method="post">
+            <h2>All Course </h2>
+            <input type="password" placeholder="Secrate pin" required>
+            <input type="submit" name="sunmit" valu="Submit" id="">
+        </form>
+    </div>
+
+    <script>
+
+            const nav = document.querySelector("nav");
+            const ul = document.querySelector("ul");
+            const hamburger = document.querySelector(".ham-burger")
+            hamburger.addEventListener("click", () => {
+                nav.classList.toggle("h-nav");
+                ul.classList.toggle("v-nav");
+
+            })
+        
+        const container = document.querySelector(".container");
+        const all_course = document.querySelector(".all_course")
+        const add_course = document.querySelector(".add_course");
+        const update_course = document.querySelector(".update_course");
+        const delete_course = document.querySelector(".delete_course");
+
+        all_course.addEventListener("click",()=>{
+            container.innerHTML = ` <div class="container">
+        <form action="/allcourse" method="post">
+            <h2>All Course </h2>
+            <input type="password" placeholder="Secrate pin" required>
+            <input type="submit" name="sunmit" valu="Submit" id="">
+        </form>
+    </div>`
+
+        })
+        add_course.addEventListener("click",()=>{
+            container.innerHTML = ` <div class="container">
+        <form action="/upload" method="post">
+            <h2>Add Course </h2>
+            <input type="password" placeholder="Secrate pin" required>
+            <input type="submit" name="sunmit" valu="Submit" id="">
+        </form>
+    </div>`
+
+        })
+        update_course.addEventListener("click",()=>{
+            container.innerHTML = ` <div class="container">
+        <form action="/update" method="post">
+            <h2>update Course </h2>
+            <input type="password" placeholder="Secrate pin" required>
+            <input type="submit" name="sunmit" valu="Submit" id="">
+        </form>
+    </div>`
+
+        })
+        delete_course.addEventListener("click",()=>{
+            container.innerHTML = ` <div class="container">
+        <form action="/delete" method="post">
+            <h2>Delete Course </h2>
+            <input type="password" placeholder="Secrate pin" required>
+            <input type="submit" name="sunmit" valu="Submit" id="">
+        </form>
+    </div>`
+
+        })
+
+    </script>
+
+
+</body>
+
+</html>
