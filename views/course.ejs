@@ -129,104 +129,32 @@
      --------------------------------------->
         <section class="section section-course">
             <div class="container d-flex">
-                <h2 class="common-heading">Recently Uploaded</h2>
+                <h2 class="common-heading">Most Downloaded</h2>
             </div>
             <div class="container">
                 <div class="course-boxes">
-                    <div class="course-box d-flex d-flex-column">
-                        <div class="course-data">
-                            <div class="course-img">
-                                <img src="/static/img/course-2.jpg" alt="">
-                            </div>
-                            <div class="course-title">
-                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
-                                <p>Become a Ethical hacker by completing this course, This course is for absulute
-                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
-                                    course, This course is for absulute begginers.</p>
-                            </div>
-                        </div>
-                        <div class="course-btn">
-                            <span>15<i class="fa-solid fa-download"></i></span>
-                            <span>Duration: 1.5hr</span>
-                            <a href="/" class="btn-2">Get Free</a>
-                        </div>
-                    </div>
                     <!-- ========================== -->
-                    <div class="course-box d-flex d-flex-column">
-                        <div class="course-data">
-                            <div class="course-img">
-                                <img src="/static/img/course-5.jpg" alt="">
+                    <% most_download.forEach((obj)=>{ %>
+
+                        <div class="course-box d-flex d-flex-column">
+                            <div class="course-data">
+                                <div class="course-img">
+                                    <img src=<%=obj.image %> alt="">
+                                </div>
+                                <div class="course-title">
+                                    <a href="/" class="course-heading"><%= obj.title %></a>
+                                    <p><%= obj.author %></p>
+                                    <p><%= obj.discription.slice(0,150)%>...</p>
+                                </div>
                             </div>
-                            <div class="course-title">
-                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
-                                <p>Become a Ethical hacker by completing this course, This course is for absulute
-                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
-                                    course, This course is for absulute begginers.</p>
+                            <div class="course-btn">
+                                <span>15<i class="fa-solid fa-download"></i></span>
+                                <span><%= obj.duration/60 %>hr</span>
+                                <a href=<%=obj.link %> class="btn-2">Get Free</a>
                             </div>
+
                         </div>
-                        <div class="course-btn">
-                            <span>15<i class="fa-solid fa-download"></i></span>
-                            <span>Duration: 1.5hr</span>
-                            <a href="/" class="btn-2">Get Free</a>
-                        </div>
-                    </div>
-                    <!-- ==================================== -->
-                    <div class="course-box d-flex d-flex-column">
-                        <div class="course-data">
-                            <div class="course-img">
-                                <img src="/static/img/course-6.jpg" alt="">
-                            </div>
-                            <div class="course-title">
-                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
-                                <p>Become a Ethical hacker by completing this course, This course is for absulute
-                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
-                                    course, This course is for absulute begginers.</p>
-                            </div>
-                        </div>
-                        <div class="course-btn">
-                            <span>15<i class="fa-solid fa-download"></i></span>
-                            <span>Duration: 1.5hr</span>
-                            <a href="/" class="btn-2">Get Free</a>
-                        </div>
-                    </div>
-                    <!-- ================================================== -->
-                    <div class="course-box d-flex d-flex-column">
-                        <div class="course-data">
-                            <div class="course-img">
-                                <img src="/static/img/course-7.jpg" alt="">
-                            </div>
-                            <div class="course-title">
-                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
-                                <p>Become a Ethical hacker by completing this course, This course is for absulute
-                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
-                                    course, This course is for absulute begginers.</p>
-                            </div>
-                        </div>
-                        <div class="course-btn">
-                            <span>15<i class="fa-solid fa-download"></i></span>
-                            <span>Duration: 1.5hr</span>
-                            <a href="/" class="btn-2">Get Free</a>
-                        </div>
-                    </div>
-                    <!-- ============================================ -->
-                    <div class="course-box d-flex d-flex-column">
-                        <div class="course-data">
-                            <div class="course-img">
-                                <img src="/static/img/course-8.jpg" alt="">
-                            </div>
-                            <div class="course-title">
-                                <a href="/" class="course-heading">Tech hack Technical sagar course</a>
-                                <p>Become a Ethical hacker by completing this course, This course is for absulute
-                                    begginers.Tech hack Technical sagar cours Become a Ethical hacker by completing this
-                                    course, This course is for absulute begginers.</p>
-                            </div>
-                        </div>
-                        <div class="course-btn">
-                            <span>15<i class="fa-solid fa-download"></i></span>
-                            <span>Duration: 1.5hr</span>
-                            <a href="/" class="btn-2">Get Free</a>
-                        </div>
-                    </div>
+                    <% }) %>
                 </div>
             </div>
         </section>n
@@ -235,120 +163,32 @@
         <section class="section section-course">
             <div class="container d-flex">
                 <div class="container d-flex">
-                    <h2 class="common-heading">Programming course</h2>
+                    <h2 class="common-heading">Programming courses</h2>
                 </div>
             </div>
             <div class="container d-flex">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
+                    
+                        <!-- <div class="swiper-slide">
                             <img src="/static/img/course-2.jpg" alt="">
                             <div class="swiper-slide-bottom">
                                 <h2>Abdul Bari data structure and algo with c/c++</h2>
                                 <p>Complete c++ course download in free with mega link</p>
                                 <a href="" class="btn-2">Download</a>
                             </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
+                        </div> -->
+                        <% programming_courses.forEach((obj)=>{  %>
+                            <div class="swiper-slide">
+                                <img src=<%=obj.image %> alt="" loading="lazy"> 
+                                <div class="swiper-slide-bottom">
+                                    <h2><%= obj.title %></h2>
+                                    <p><%= obj.discription.slice(0,70) %>...</p>
+                                    <a href=<%= obj.link %> class="btn-2">Download</a>
+                                </div>
                             </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-2.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-7.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-6.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
+                        <% }) %>
+                        
 
                     </div>
                     <div class="swiper-button-next"></div>
@@ -365,114 +205,26 @@
             <div class="container d-flex">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
+                    
+                        <!-- <div class="swiper-slide">
                             <img src="/static/img/course-2.jpg" alt="">
                             <div class="swiper-slide-bottom">
                                 <h2>Abdul Bari data structure and algo with c/c++</h2>
                                 <p>Complete c++ course download in free with mega link</p>
                                 <a href="" class="btn-2">Download</a>
                             </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
+                        </div> -->
+                        <% hacking_courses.forEach((obj)=>{  %>
+                            <div class="swiper-slide">
+                                <img src=<%=obj.image %> alt="" loading="lazy">
+                                <div class="swiper-slide-bottom">
+                                    <h2><%= obj.title %></h2>
+                                    <p><%= obj.discription.slice(0,70) %>...</p>
+                                    <a href=<%= obj.link %> class="btn-2">Download</a>
+                                </div>
                             </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-2.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-7.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-6.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
+                        <% }) %>
+                        
 
                     </div>
                     <div class="swiper-button-next"></div>
@@ -481,129 +233,6 @@
 
             </div>
 
-            <div class="container d-flex">
-                <div class="container d-flex">
-                    <h2 class="common-heading">Designing courses</h2>
-                </div>
-            </div>
-            <div class="container d-flex">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-2.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-2.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-5.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-7.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-6.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/static/img/course-1.jpg" alt="">
-                            <div class="swiper-slide-bottom">
-                                <h2>Abdul Bari data structure and algo with c/c++</h2>
-                                <p>Complete c++ course download in free with mega link</p>
-                                <a href="" class="btn-2">Download</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-
-            </div>
 
         </section>
 

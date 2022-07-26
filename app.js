@@ -61,16 +61,23 @@ const upload = multer({
 ---------------------------------------------------------*/
 app.get("/", async (req, res) => {
 
-    const result = await Course.find({trend:"top five"});
+    const result = await Course.find({trend:"top five"}).limit(5);
     // console.log(result)
     res.render("index",{result});
 
 
 })
 app.get("/course", async (req, res) => {
-    res.render("course");
+    const most_download = await Course.aggregate([{$match:{trend:{$in:["most downloaded", "most downloaded"]}}}]);
+    const programming_courses = await Course.aggregate([{$match:{category:{$in:["programming", "coding","dsa"]}}}]);
+    const hacking_courses = await Course.aggregate([{$match:{category:{$in:["hacking", "carding"]}}}]);
+
+    // console.log(programming_courses);
+
+    res.render("course",{most_download,programming_courses,hacking_courses});
 
 })
+
 app.get("/login", async (req, res) => {
     res.render("login");
 
@@ -123,22 +130,16 @@ app.post("/signup", async (req, res) => {
 
 })
 
-app.post("/upload", async (req, res) => {
-    totalCourse = await Course.find().count();
 
-    res.render("upload",{c_id:totalCourse});
-
-})
 
 app.post("/uploadcourse", upload.single("imageFile"), async (req, res) => {
-    totalCourse = await Course.find().count();
-    let c_id = totalCourse+1;
+    let totalCourses = await Course.findOne().sort({c_id:-1});
+    let totalcourse = totalCourses.c_id
+    let c_id = totalcourse+1;
     let cat = req.body.category.split(",");
     let keyword = req.body.keyword.split(",");
     let trend = req.body.trends.split(",");
     try {
-
-
         const course = new Course({
             c_id:c_id,
             title: req.body.title,
@@ -182,6 +183,44 @@ app.post("/uploadcourse", upload.single("imageFile"), async (req, res) => {
 app.get("/admin",(req,res)=>{
     res.render("admin")
 })
+app.post("/upload", async (req, res) => {
+    let totalCourses = await Course.findOne().sort({c_id:-1});
+    let totalcourse = totalCourses.c_id
+    res.render("upload",{c_id:totalcourse});
+})
+
+app.post("/allcourse", async (req, res) => {
+    const courses = await Course.find();
+    // console.log(courses)
+    res.render("allcourse",{courses:courses});
+})
+app.post("/update", async (req, res) => {
+
+    res.render("update",);
+})
+
+app.post("/updatecourse",async (req,res)=>{
+    const course_id = req.body.c_id;
+    try {
+        const responce = await Course.findOne({c_id:course_id})
+        if(responce)
+        {
+            // res.send(responce)
+            res.render("updatecourse",{responce});
+
+        }   
+        else
+        {
+            res.send("No record found! please enter a valid code.")
+        }                           
+
+    } catch (error) {
+        res.send(error)
+        
+    }
+    
+})
+
 app.get("*", (req, res) => {
     res.send("page not found!");
 

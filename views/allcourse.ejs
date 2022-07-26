@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List Free Course</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    section {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: #f3f3f3;
+
+    }
+
+    .container {
+        padding: 5rem .5rem;
+        max-width: 50rem;
+        margin: auto;
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    fieldset {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    input {
+        padding: 5px;
+        font-size: 1.3rem;
+
+    }
+
+    table {
+        width: 100%;
+        font-size: 1.1rem;
+
+    }
+
+    td,
+    tr,
+    th {
+        padding: 10px;
+    }
+
+    @media (max-width:600px)
+    {
+        table{
+            font-size: .8rem;
+        }
+        input {
+        padding: 2px;
+        font-size: .8rem;
+
+    }
+    td,
+    tr,
+    th {
+        padding: 5px;
+    }
+    fieldset {
+        width: 100%;
+        padding: .5rem;
+        font-size: .8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+    }
+    }
+    @media (max-width:400px)
+    {
+        table{
+            font-size: .5rem;
+        }
+        input {
+        padding: 2px;
+        font-size: .5rem;
+
+    }
+    td,
+    tr,
+    th {
+        padding: 3px;
+    }
+    fieldset {
+        width: 100%;
+        padding: .2rem;
+        font-size: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .3rem;
+    }
+    }
+</style>
+
+<body>
+    <section>
+        <div class="container">
+
+
+            <fieldset>
+                <legend>Search for course</legend>
+                <input type="text" name="c_id" id="c_id" placeholder="Seach course By id" required>
+                <input type="submit" onclick="show()" value="Search" name="submit">
+            </fieldset>
+            <table border="2px" cellspacing="0px">
+                <tr>
+                    <th>C_ID</th>
+                    <th>COURSE TITLE</th>
+                    <th>AUTHOR</th>
+                    <th>CATEGORY</th>
+                </tr>
+                <% courses.forEach((element)=>{ %>
+                    
+                    <tr>
+                        <td class="c-id"><%= element.c_id %></td>
+                        <td class="c-title"><%= element.title %></td>
+                        <td class="c-author"><%= element.author %></td>
+                        <td class="c-category"><%= element.category %></td>
+                    </tr>
+
+                <% }) %>
+
+            </table>
+        </div>
+    </section>
+
+    <script>
+        let c_id = document.getElementsByClassName("c-id");
+        input_cid = document.getElementById("c_id");
+        //console.log(c_id);
+        function show(event){
+            // event.preventDefault();
+            Array.from(c_id).forEach((val)=>{
+            if(val.innerText === input_cid.value){
+                tr = val.parentElement.parentElement;
+                tr.style.display="inline-block"
+
+            }
+            else
+            {
+                tr = val.parentElement;
+                //console.log(tr)
+                tr.style.display="none"
+            }
+        })
+        }
+
+        
+    </script>
+</body>
+
+</html>

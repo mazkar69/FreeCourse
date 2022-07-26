@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List Free Course</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    section {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: #f3f3f3;
+
+    }
+
+    .container {
+        padding: 5rem .5rem;
+        max-width: 50rem;
+        margin: auto;
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    fieldset {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    input {
+        padding: 5px;
+        font-size: 1.3rem;
+
+    }
+
+
+
+    @media (max-width:600px)
+    {
+
+        input {
+        padding: 2px;
+        font-size: .8rem;
+
+    }
+
+    fieldset {
+        width: 100%;
+        padding: .5rem;
+        font-size: .8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+    }
+    }
+    @media (max-width:400px)
+    {
+
+        input {
+        padding: 2px;
+        font-size: .5rem;
+
+    }
+
+    fieldset {
+        width: 100%;
+        padding: .2rem;
+        font-size: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .3rem;
+    }
+    }
+</style>
+
+<body>
+    <section>
+        <div class="container">
+            <form action="/updatecourse" method="post">
+            <fieldset>
+                <legend>Search for course</legend>
+                <input type="text" name="c_id" id="c_id" placeholder="Seach course By id" required>
+                <input type="submit" onclick="show()" value="Search" name="submit">
+            </fieldset>
+        </form>
+           
+        </div>
+    </section>
+
+   
+    </script>
+</body>
+
+</html>

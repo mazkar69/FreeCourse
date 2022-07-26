@@ -571,10 +571,21 @@ h3 {
     margin-bottom: 1rem;
 }
 
-.box .btn-2 {
-    font-size: 2rem;
-}
 
+
+.box a{
+    
+    font-size: 2rem;
+    padding: 1rem 2.5rem;
+    background-color: var(--helper);
+    cursor: pointer;
+    color: var(--white);
+    border: 0;
+    border-radius: .5rem;
+    transition: all .3s linear;
+    display: block;
+    margin: 1rem 0rem;
+}
 /* ------------------------------------
         Testimonial Section code
     ------------------------------------*/

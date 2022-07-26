@@ -96,8 +96,6 @@
         padding: 0 1rem;
     }
 
-
-
     @media (max-width:800px) {
         html {
             font-size: 47%;
@@ -121,10 +119,10 @@
     <section>
         <div class="container">
 
-            <h1>Upload Course</h1>
+            <h1>UpdateCourse</h1>
             <form action="/uploadcourse" method="post" enctype="multipart/form-data">
 
-                <div class="box" id="box1"><input type="text" placeholder=<%=c_id + 1%> required name="c_id" disabled>
+                <div class="box" id="box1"><input type="text" placeholder="Course Id" required name=<%= responce.c_id %> disabled id="course_id">
                 </div>
                 <div class="box" id="box2">
                     <textarea name="description" id="descrip" placeholder="*Description about course..."
@@ -149,12 +147,28 @@
                 <div class="box" id="box11"><input type="text" name="link" placeholder="*Download link" required></div>
                 <div class="box" id="box12"><span>Upload image:</span><input type="file" name="imageFile" required>
                 </div>
-                <div class="box" id="box13"><input type="submit" value="Upload"></div>
+                <div class="box" id="box13"><input type="submit" value="Update"></div>
 
             </form>
         </div>
 
+
     </section>
+    <script>
+        const courseId = document.getElementById("course_id");
+        // courseId.value = <%= responce.c_id %>;
+        const discription = document.getElementById("box1");
+        const title = document.getElementById("box1");
+        const author = document.getElementById("box1");
+        const language = document.getElementById("box1");
+        const duration = document.getElementById("box1");
+        const keyword = document.getElementById("box1");
+        const trend = document.getElementById("box1");
+        const download = document.getElementById("box1");
+        const category = document.getElementById("box1");
+        const link = document.getElementById("box1");
+        // const  field= ument.getElementById("box1");
+    </script>
     
 </body>
 

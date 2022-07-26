@@ -29,7 +29,8 @@
                     </div>
                     <div class="hero-btn d-flex">
                         <a href="/course" class="btn-2">Course</a>
-                        <button class="btn-2">Join Us</button>
+                        <a href="/signup" class="btn-2">Join us</a>
+
                     </div>
                 </div>
             </section>
@@ -48,29 +49,22 @@
                                 Easy Download
                             </h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut deserunt aperiam blanditiis
-                                pariatur nobis aliquam distinctio accusamus error? Earum, expedita.
+                                You can download any course in just one click. There will be no add no short link. All The link is working. If you have any trubble while downloading the course, feel free to contact us. We will definatly response.
                             </p>
                         </div>
                         <div class="feature-box d-flex d-flex-column">
                             <i class="fa-solid fa-circle-down feature-icon"></i>
                             <h3>
-                                Easy Download
+                                Support
                             </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut deserunt aperiam blanditiis
-                                pariatur nobis aliquam distinctio accusamus error? Earum, expedita.
-                            </p>
+                            <p>We are daily uploading new courses and updateing the url which is not working, In case we have any problems in downloading you can mail us, our team will response you soon. </p>
                         </div>
                         <div class="feature-box d-flex d-flex-column">
                             <i class="fa-solid fa-circle-question feature-icon"></i>
                             <h3>
                                 Demand Course
                             </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut deserunt aperiam blanditiis
-                                pariatur nobis aliquam distinctio accusamus error? Earum, expedita.
-                            </p>
+                            <p>We have more then 11000+ course from different different online platform. In case if you can't find your desired course you can demand us for that course an we will upload the course in few days.</p>
                         </div>
                     </div>
                 </div>
@@ -88,21 +82,22 @@
                             <div class="course-box d-flex d-flex-column">
                                 <div class="course-data">
                                     <div class="course-img">
-                                        <img src=<%=obj.image %> alt="">
+                                        <img src=<%=obj.image %> loading="lazy"> alt="">
                                     </div>
                                     <div class="course-title">
                                         <a href="/" class="course-heading">
                                             <%= obj.title %>
                                         </a>
+                                        <p><%= obj.author %></p>
                                         <p>
-                                            <%= obj.discription.slice(0,120)%>...
+                                            <%= obj.discription.slice(0,120) %>...
                                         </p>
                                     </div>
                                 </div>
                                 <div class="course-btn">
                                     <span>15<i class="fa-solid fa-download"></i></span>
                                     <span>Duration: <%= obj.duration/60 %>hr</span>
-                                    <a href=<%=obj.link %> class="btn-2" target="_blank">Get Free</a>
+                                    <a href=<%= obj.link %> class="btn-2" target="_blank">Get Free</a>
                                 </div>
                             </div>
 
@@ -113,7 +108,8 @@
             </section>
 
             <!------------------------------------- 
-    Banner Section  start here
+    Banner Section  start here 
+
 --------------------------------------->
             <section class="section section-banner">
                 <div class="container d-flex d-flex-column">
@@ -132,7 +128,22 @@
                 <div class="container grid grid-three-column">
                     <div class="box">
                         <div class="image">
-                            ---<img src="/static/img/course-1.jpg">-----
+                            <img src="/static/img/azkar.jpeg" loading="lazy">
+                        </div>
+                        <div class="name_job">
+                            <h3>Mohd Azkar</h3>
+                        </div>
+                        <div class="rating">
+                            <span>Software engineer</span>
+                        </div>
+                        <p> Full Stack Web Developer and Software Engineer, Pursuing BCA from IMS Noida. Working as a freelancer. Having experince of 2yr in Cyber Security and Ethical Hacking.</p>
+                        <div>
+                            <a href="http://mdazkar.herokuapp.com/" target="_blank">Portfolio</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            ---<img src="/static/img/hero2.jpg" loading="lazy">-----
                         </div>
                         <div class="name_job">
                             <h3>Mohd Azkar</h3>
@@ -149,24 +160,7 @@
                     </div>
                     <div class="box">
                         <div class="image">
-                            ---<img src="/static/img/hero2.jpg">-----
-                        </div>
-                        <div class="name_job">
-                            <h3>Mohd Azkar</h3>
-                        </div>
-                        <div class="rating">
-                            <span>Project manager</span>
-                        </div>
-                        <p> Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit. Ratione disuja doloremque
-                            reiciendi
-                            nemo.</p>
-                        <div>
-                            <button class="btn-2">Portfolio</button>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="image">
-                            ---<img src="/static/img/hero2.jpg">-----
+                            ---<img src="/static/img/hero2.jpg" loading="lazy">-----
                         </div>
                         <div class="name_job">
                             <h3>Mohd Azkar</h3>
@@ -198,59 +192,24 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide d-flex d-flex-column">
                                 <i class="fa-solid fa-quote-right"></i>
-                                <p>Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's
-                                    cronut +1
-                                    kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking
-                                    vinegar cronut
-                                    adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard
-                                    four loko
-                                    knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they
-                                    sold out
-                                    gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb
-                                    next
-                                    level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic
-                                    drinking
-                                    vinegar.</p>
+                                <p>This website is really awesome. I was searching the udemy course in free in google i check many website in google but non o them providing the course in free. Some was fake and some are asking for money and some website are showing two many adds. After searching a lot on the goole I finally found this amamzing website where i found all my favorite course, This website provide one click downlaod weithout showing any adds. Thank you so much.</p>
+                                <div class="divider"></div>
+                                <h3>LIZA</h3>
+
+                            </div>
+                            <div class="swiper-slide d-flex d-flex-column">
+                                <i class="fa-solid fa-quote-right"></i>
+                                <p>I was thinking to learn data structure and algorithm, but when i search on google the price of the course was too much high. then i search those couse in free in telegram but i can't find any good course. After seaching a lot I found this amazing website where i can find all types of course and even i can download in just one click. This website have a lot of free course in free. Now i am learning Data Structure algorithm in free. Thank you so much.</p>
                                 <div class="divider"></div>
                                 <h3>HOLDEN CAULFIELD</h3>
 
                             </div>
                             <div class="swiper-slide d-flex d-flex-column">
                                 <i class="fa-solid fa-quote-right"></i>
-                                <p>Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's
-                                    cronut +1
-                                    kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking
-                                    vinegar cronut
-                                    adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard
-                                    four loko
-                                    knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they
-                                    sold out
-                                    gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb
-                                    next
-                                    level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic
-                                    drinking
-                                    vinegar.</p>
+                                <p>I am a tech student, I wanted to learn java programming. My friend told me to learn java from udemy abdul bari course. when i visit udemy i saw the price of that course was too much, then I search that course in google to get in free i saw many many providing that course in free but some are providing the half course and some are fake. Then my fried told me to check this website when i visit here i found that full course easily and i downloaded that course.This website is really amazing.
+                                </p>
                                 <div class="divider"></div>
-                                <h3>HOLDEN CAULFIELD</h3>
-
-                            </div>
-                            <div class="swiper-slide d-flex d-flex-column">
-                                <i class="fa-solid fa-quote-right"></i>
-                                <p>Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's
-                                    cronut +1
-                                    kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking
-                                    vinegar cronut
-                                    adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard
-                                    four loko
-                                    knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they
-                                    sold out
-                                    gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb
-                                    next
-                                    level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic
-                                    drinking
-                                    vinegar.</p>
-                                <div class="divider"></div>
-                                <h3>HOLDEN CAULFIELD</h3>
+                                <h3>ARMAN KHAN</h3>
 
                             </div>
 
