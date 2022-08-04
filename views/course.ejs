@@ -142,19 +142,27 @@
                                     <img src=<%=obj.image %> alt="">
                                 </div>
                                 <div class="course-title">
-                                    <a href="/" class="course-heading"><%= obj.title %></a>
-                                    <p><%= obj.author %></p>
-                                    <p><%= obj.discription.slice(0,150)%>...</p>
+                                    <a href="/" class="course-heading">
+                                        <%= obj.title %>
+                                    </a>
+                                    <p>
+                                        <%= obj.author %>
+                                    </p>
+                                    <p>
+                                        <%= obj.discription.slice(0,150)%>...
+                                    </p>
                                 </div>
                             </div>
                             <div class="course-btn">
                                 <span>15<i class="fa-solid fa-download"></i></span>
-                                <span><%= obj.duration/60 %>hr</span>
+                                <span>
+                                    <%= obj.duration/60 %>hr
+                                </span>
                                 <a href=<%=obj.link %> class="btn-2">Get Free</a>
                             </div>
 
                         </div>
-                    <% }) %>
+                        <% }) %>
                 </div>
             </div>
         </section>n
@@ -169,7 +177,7 @@
             <div class="container d-flex">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                    
+
                         <!-- <div class="swiper-slide">
                             <img src="/static/img/course-2.jpg" alt="">
                             <div class="swiper-slide-bottom">
@@ -178,17 +186,21 @@
                                 <a href="" class="btn-2">Download</a>
                             </div>
                         </div> -->
-                        <% programming_courses.forEach((obj)=>{  %>
+                        <% programming_courses.forEach((obj)=>{ %>
                             <div class="swiper-slide">
-                                <img src=<%=obj.image %> alt="" loading="lazy"> 
+                                <img src=<%=obj.image %> alt="" loading="lazy">
                                 <div class="swiper-slide-bottom">
-                                    <h2><%= obj.title %></h2>
-                                    <p><%= obj.discription.slice(0,70) %>...</p>
-                                    <a href=<%= obj.link %> class="btn-2">Download</a>
+                                    <h2>
+                                        <%= obj.title %>
+                                    </h2>
+                                    <p>
+                                        <%= obj.discription.slice(0,70) %>...
+                                    </p>
+                                    <a href=<%=obj.link %> class="btn-2">Download</a>
                                 </div>
                             </div>
-                        <% }) %>
-                        
+                            <% }) %>
+
 
                     </div>
                     <div class="swiper-button-next"></div>
@@ -205,7 +217,7 @@
             <div class="container d-flex">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                    
+
                         <!-- <div class="swiper-slide">
                             <img src="/static/img/course-2.jpg" alt="">
                             <div class="swiper-slide-bottom">
@@ -214,17 +226,21 @@
                                 <a href="" class="btn-2">Download</a>
                             </div>
                         </div> -->
-                        <% hacking_courses.forEach((obj)=>{  %>
+                        <% hacking_courses.forEach((obj)=>{ %>
                             <div class="swiper-slide">
                                 <img src=<%=obj.image %> alt="" loading="lazy">
                                 <div class="swiper-slide-bottom">
-                                    <h2><%= obj.title %></h2>
-                                    <p><%= obj.discription.slice(0,70) %>...</p>
-                                    <a href=<%= obj.link %> class="btn-2">Download</a>
+                                    <h2>
+                                        <%= obj.title %>
+                                    </h2>
+                                    <p>
+                                        <%= obj.discription.slice(0,70) %>...
+                                    </p>
+                                    <a href=<%=obj.link %> class="btn-2">Download</a>
                                 </div>
                             </div>
-                        <% }) %>
-                        
+                            <% }) %>
+
 
                     </div>
                     <div class="swiper-button-next"></div>
@@ -250,9 +266,9 @@
             <!-- Initialize Swiper -->
             <script>
                 var swiper = new Swiper(".mySwiper", {
-                    slidesPerView: 3,
+                    slidesPerView: 1,
                     spaceBetween: 20,
-                    slidesPerGroup: 3,
+                    // slidesPerGroup: 3,
                     loopFillGroupWithBlank: true,
                     freeMode: true,
                     navigation: {
@@ -263,27 +279,29 @@
                         100: {
                             slidesPerView: 1,
                             spaceBetween: 20,
-                            slidesPerGroup: 1,
+                            // slidesPerGroup: 1,
 
                         },
                         400: {
                             slidesPerView: 2,
                             spaceBetween: 20,
-                            slidesPerGroup: 2,
+                            // slidesPerGroup: 2,
                         },
                         680: {
                             slidesPerView: 3,
-                            slidesPerGroup: 3,
+                            // slidesPerGroup: 3,
                             spaceBetween: 20,
                         },
                         1024: {
                             slidesPerView: 3,
-                            slidesPerGroup: 3,
+                            // slidesPerGroup: 3,
                             spaceBetween: 20,
                         },
                     },
                 });
             </script>
+
+           
 
 
 </body>
